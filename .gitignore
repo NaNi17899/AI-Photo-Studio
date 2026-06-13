@@ -1,0 +1,57 @@
+# Virtual environments
+.venv/
+venv/
+ai_photo_studio/venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+dist/
+build/
+
+# Ruff / linter caches
+.ruff_cache/
+
+# Pytest cache
+.pytest_cache/
+
+# Model files (large binary files)
+*.pth
+*.pt
+*.onnx
+*.bin
+*.h5
+*.safetensors
+models/
+ai_photo_studio/models/
+ai_photo_studio/gfpgan/
+
+# Data & temp directories
+ai_photo_studio/data/
+ai_photo_studio/temp/
+ai_photo_studio/outputs/
+
+# Node modules (frontend)
+node_modules/
+ai_photo_studio/frontend/node_modules/
+
+# Environment files
+.env
+*.env.local
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log

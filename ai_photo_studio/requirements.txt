@@ -1,0 +1,51 @@
+# ==============================================================================
+# AI Photo Studio — Python Dependencies
+# ==============================================================================
+
+# --- Core Framework ---
+fastapi==0.115.0
+uvicorn[standard]==0.31.0
+pydantic-settings==2.6.0
+python-multipart==0.0.12
+websockets==13.1
+
+# --- Database ---
+sqlalchemy==2.0.35
+
+# --- AI / ML Core ---
+torch>=2.1.0
+torchvision>=0.16.0
+torchaudio>=2.1.0
+
+# --- Image Processing ---
+Pillow>=10.0.0
+opencv-python>=4.8.0
+numpy>=1.24.0
+
+# --- Background Removal ---
+rembg[gpu]>=2.0.50
+
+# --- Face Enhancement ---
+gfpgan>=1.3.8
+basicsr>=1.4.2
+facexlib>=0.3.0
+realesrgan>=0.3.0
+
+# --- Inpainting ---
+simple-lama-inpainting>=0.1.0
+
+# --- OCR (Watermark Detection) ---
+easyocr>=1.7.0
+
+# --- Stable Diffusion (Style Transfer, Anime, Headshots) ---
+diffusers>=0.30.0
+transformers>=4.40.0
+accelerate>=0.33.0
+safetensors>=0.4.0
+
+# --- Utilities ---
+requests>=2.31.0
+tqdm>=4.66.0
+psutil>=5.9.0
+python-dotenv>=1.0.0
+aiofiles>=23.2.0

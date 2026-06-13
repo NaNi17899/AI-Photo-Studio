@@ -1,0 +1,16 @@
+{
+  "venvPath": ".",
+  "venv": "venv",
+  "pythonVersion": "3.12",
+  "reportMissingModuleSource": false,
+  "reportMissingImports": "warning",
+  "typeCheckingMode": "basic",
+  "extraPaths": [],
+  "ignore": [
+    "step1_verify_setup.py",
+    "step2_install_packages.bat",
+    "step3_download_models.py",
+    "step4_test_models.py",
+    "step5_app.py"
+  ]
+}

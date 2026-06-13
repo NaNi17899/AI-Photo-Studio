@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  ai-photo-studio:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: ai-photo-studio
+    ports:
+      - "8000:8000"
+    volumes:
+      - ../data/models:/app/data/models
+      - ../data/uploads:/app/data/uploads
+      - ../data/outputs:/app/data/outputs
+      - ../data/backgrounds:/app/data/backgrounds
+      - ../data/db:/app/data/db
+    environment:
+      - SERVER_HOST=0.0.0.0
+      - SERVER_PORT=8000
+      - GPU_DEVICE=auto
+      - GPU_MAX_VRAM_USAGE_MB=3500
+      - GPU_MIXED_PRECISION=true
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/info"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
